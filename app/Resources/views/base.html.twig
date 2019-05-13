@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <!-- Bootstrap core CSS -->
+        <link href="{{asset('vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="{{asset('css/modern-business.css')}}" rel="stylesheet">
+        <!-- Font-Awesome CSS -->        
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>       
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">INICIO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">CARTA</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">EVENTOS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">LOCALIZACIÓN</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">MUNDO JAMÓN</a>
+          </li>          
+        </ul>
+        <!-- /Menú de Navegación -->
+        {% block body %}
+        {% endblock %}
+        {% block javascripts %}
+            <!-- Bootstrap core JavaScript -->
+            <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
+            <script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+        {% endblock %}
+    </body>
+</html>
